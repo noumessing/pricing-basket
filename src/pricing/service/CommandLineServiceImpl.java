@@ -51,17 +51,7 @@ public class CommandLineServiceImpl implements CommandLineService {
 
 	}
 
-/*	@Override
-	public double getPercentageDiscount(Product prod, Unity inity) {
 
-		double percentage = 0;
-		DiscountSave discountSave = manageData.getDiscountProduct(prod, inity);
-		if (discountSave != null) {
-			percentage = discountSave.getPercentage();
-		}
-
-		return percentage;
-	}*/
 	@Override
 	public double getPercentageDiscount(Product prod, Unity inity) {
 
@@ -88,17 +78,11 @@ public class CommandLineServiceImpl implements CommandLineService {
 		
 
 		if (amountDiscount != 0) {
-			if (commandLine.getProduct().getProductName().equals("Bread")) {
+	
 
-				System.out.println(commandLine.getProduct().getProductName() + " " + " off:-"
+				System.out.println(commandLine.getProduct().getProductName() + " off:-"
 						+ Utils.formatPrice(amountDiscount));
-
-			} else {
-
-				System.out.println(commandLine.getProduct().getProductName() + " "
-						+ getPercentageDiscount(commandLine.getProduct(), commandLine.getUnity()) + "%off:-"
-						+ Utils.formatPrice(amountDiscount));
-			}
+			
 		}
 
 	}
